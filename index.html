@@ -8,7 +8,9 @@
   </head>
   <body>
     <div id="root">
-      <div class="slider">
+      <div class="slider"
+            @mouseenter="stopLoop"
+            @mouseleave="startLoop">
 <!-- Precedente -->
         <div class="prev" @click="prevPic">
           <i class="fas fa-chevron-left"></i>

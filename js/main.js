@@ -7,9 +7,12 @@ const root = new Vue({
           './images/image2.jpg',
           './images/image3.jpg',
           './images/image4.jpg',
-      ]
+      ],
+      intervalId: 0,
   },
-
+  created(){
+      this.startLoop();
+  },
   methods: {
     nextPic() {
       this.indexPic += 1;
@@ -29,8 +32,18 @@ const root = new Vue({
 
     setPic(index) {
       this.indexPic = index;
-    }
+    },
 
+    // Inizio loop in base all'intervallo di tempo
+    startLoop() {
+      this.intervalId = setInterval( () => {
+          this.nextPic();
+      }, 3000);
+    },
+
+    stopLoop() {
+      clearInterval(this.intervalId);
+    }
   }
 
 });
