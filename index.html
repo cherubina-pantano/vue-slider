@@ -11,7 +11,7 @@
     <div id="root">
       <div class="slider">
 <!-- Precedente -->
-        <div class="prev">
+        <div class="prev" @click="prevPic">
           <i class="fas fa-chevron-left"></i>
         </div>
 <!-- Immagini -->
@@ -20,7 +20,7 @@
 
         </div>
 <!-- Successiva -->
-        <div class="next">
+        <div class="next" @click="nextPic">
           <i class="fas fa-chevron-right"></i>
         </div>
 <!-- Nav con circle -->
@@ -51,7 +51,7 @@
 
 
     <!-- JS -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="./js/main.js" charset="utf-8"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./js/main.js" charset="utf-8"></script>
   </body>
 </html>
