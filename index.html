@@ -3,10 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Slider Vue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
 
+    <div id="root">
+      <div class="slider">
+<!-- Precedente -->
+        <div class="prev">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+<!-- Immagini -->
+        <div class="images">
+          <img :src="pictures[indexPic]" alt="image">
+
+        </div>
+<!-- Successiva -->
+        <div class="next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+<!-- Nav con circle -->
+        <div class="nav-circle">
+          <i class="fas fa-circle active"></i>
+          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>
+        </div>
+
+      </div>
+    </div>
 
 
 
@@ -23,8 +49,9 @@
 
 
 
-    <!-- JS --> 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="./js/main.js" charset="utf-8"></script>
+
+    <!-- JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./js/main.js" charset="utf-8"></script> -->
   </body>
 </html>
