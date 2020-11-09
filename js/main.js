@@ -12,11 +12,11 @@ const root = new Vue({
 
   methods: {
     nextPic() {
-        this.indexPic += 1;
+      this.indexPic += 1;
 
-        if (this.indexPic > (this.pictures.length - 1)) {
+      if (this.indexPic > (this.pictures.length - 1)) {
           this.indexPic = 0;
-        }
+      }
     },
 
     prevPic() {
@@ -25,6 +25,10 @@ const root = new Vue({
       if (this.indexPic < 0) {
         this.indexPic = this.pictures.length - 1;
       }
+    },
+
+    setPic(index) {
+      this.indexPic = index;
     }
 
   }

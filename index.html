@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-
     <div id="root">
       <div class="slider">
 <!-- Precedente -->
@@ -17,18 +16,22 @@
 <!-- Immagini -->
         <div class="images">
           <img :src="pictures[indexPic]" alt="image">
-
         </div>
 <!-- Successiva -->
         <div class="next" @click="nextPic">
           <i class="fas fa-chevron-right"></i>
         </div>
-<!-- Nav con circle -->
+<!-- Nav circle -->
         <div class="nav-circle">
-          <i class="fas fa-circle active"></i>
+          <!-- <i class="fas fa-circle active"></i>
           <i class="fas fa-circle"></i>
           <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i> -->
+
+          <i v-for="(picture, index) in pictures"
+            :class="['fas fa-circle', index == indexPic ? 'active' : '' ]"
+            @click="setPic(index)">
+          </i>
         </div>
 
       </div>
